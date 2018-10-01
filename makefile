@@ -18,10 +18,10 @@ OBJ    = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 $(ODIR)/%.o: %.c $(DEPS)
+	@IF NOT EXIST "obj\\" mkdir obj
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 $(TARGET): $(OBJ)
-#	gcc -o $@ $^ $(CFLAGS) $(LIBS)
 	ar rcs lib$(TARGET).a $^
 
 .PHONY: clean
