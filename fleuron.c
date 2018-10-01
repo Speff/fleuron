@@ -73,18 +73,3 @@ void fleuron_print(Fleuron in){
         printf("%ld\t%s\n", in->time[i], in->time_desc[i]);
     }
 }
-
-//int main(int argc, char** argv){
-//    long long i;
-//    i = 10000000;
-//    while(i--);
-//
-//    Fleuron time_r = initTimer();
-//    i = 10000000;
-//    while(i--);
-//    fleuron_add(time_r, "TEST_TIME");
-//    fleuron_print(time_r);
-//
-//    fleuron_delete(time_r);
-//    return 0;
-//}
